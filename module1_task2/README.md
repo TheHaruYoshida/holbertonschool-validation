@@ -22,3 +22,5 @@ The website should adhere to the following requirements:
 -“clean”: This command will remove the "dist/" directory, ensuring a clean state for future builds.
 
 -“post”: This command will create a new blog post.
+
+-“help”: This command will display the help command list.
