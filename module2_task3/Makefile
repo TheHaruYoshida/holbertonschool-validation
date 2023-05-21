@@ -27,7 +27,6 @@ stop: ## Stops the application
 	@pkill awesome-api
 
 test: unit-tests integration-tests ## Test on certain space
-	@echo "Test"
 
 unit-tests: ## Execute the unit tests
 	@go test -v -short -coverprofile=coverage-units.out
