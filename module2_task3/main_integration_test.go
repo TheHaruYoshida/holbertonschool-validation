@@ -52,8 +52,8 @@ func Test_server(t *testing.T) {
 		{
 			name:         "Hello page without name parameter",
 			URI:          "/hello",
-			responseCode: 400,
-			body:         "",
+			responseCode: 200,
+			body:         "Hello there!",
 		},
 	}
 
