@@ -5,7 +5,7 @@ build: lint ## Build the website
 	@hugo
 	@go build -o awesome-api
 
-clean: ## Clean the dist folder
+clean: stop ## Clean the dist folder
 	@rm -rf dist/
 	@rm -f awesome-api awesome.log
 	@rm -f coverage-units.out coverage-integrations.out
@@ -26,8 +26,7 @@ run: ## Runs the application in background
 stop: ## Stops the application
 	@pkill awesome-api
 
-test: ## Test on certain space
-	unit-tests integration-tests
+test: unit-tests integration-tests ## Test on certain space
 
 unit-tests: ## Execute the unit tests
 	@go test -v -short -coverprofile=coverage-units.out
