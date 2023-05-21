@@ -24,3 +24,9 @@ The website should adhere to the following requirements:
 -“post”: This command will create a new blog post.
 
 -“help”: This command will display the help command list.
+
+-“run”: Run the application in background by executing the binary awesome-api
+
+-“test”: You want to test it to ensure that it behaves as expected.
+
+-“stop”: Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application.
