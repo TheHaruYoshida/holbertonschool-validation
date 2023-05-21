@@ -6,8 +6,9 @@ build: lint ## Build the website
 	@go build -o awesome-api
 
 clean: ## Clean the dist folder
-	@rm -rf dist
-	@rm -f awesome-api awesome-api.log coverage-units.out coverage-integrations.out
+	@rm -rf dist/
+	@rm -f awesome-api awesome.log
+	@rm -f coverage-units.out coverage-integrations.out
 
 post: ## Create a new blog post
 	@hugo new posts/$(POST_NAME).md

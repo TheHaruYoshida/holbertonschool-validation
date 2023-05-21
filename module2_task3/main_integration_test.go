@@ -38,7 +38,7 @@ func Test_server(t *testing.T) {
 			body:         "ALIVE",
 		},
 		{
-			name:         "Hello empty page",
+			name:         "Hello missing page",
 			URI:          "/hello?name=there",
 			responseCode: 200,
 			body:         "Hello there!",
@@ -46,6 +46,12 @@ func Test_server(t *testing.T) {
 		{
 			name:         "Hello nothing page",
 			URI:          "/hello?name=",
+			responseCode: 400,
+			body:         "",
+		},
+		{
+			name:         "Hello page without name parameter",
+			URI:          "/hello",
 			responseCode: 400,
 			body:         "",
 		},
