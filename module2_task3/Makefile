@@ -24,8 +24,8 @@ run: ## Runs the application in background
 	@./awesome-api >./awesome-api.log 2>&1 &
 
 stop: ## Stops the application
-	@pkill awesome-api
-
+	@pkill awesome-api || true
+	
 test: unit-tests integration-tests ## Test on certain space
 
 unit-tests: ## Execute the unit tests
