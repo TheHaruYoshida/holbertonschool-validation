@@ -30,3 +30,5 @@ The website should adhere to the following requirements:
 -“test”: You want to test it to ensure that it behaves as expected.
 
 -“stop”: Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application.
+
+-“lint”: Fail when the linter catches an error.
