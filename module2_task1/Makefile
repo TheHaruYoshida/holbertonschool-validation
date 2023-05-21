@@ -6,8 +6,8 @@ build: ## Build the website
 	@go build -o awesome-api
 
 clean: ## Clean the dist folder
-	@pkill awesome-api
-	@rm -rf awesome-api awesome-api.log
+	@rm -rf dist
+	@rm -f awesome-api awesome-api.log
 
 post: ## Create a new blog post
 	@hugo new posts/$(POST_NAME).md
