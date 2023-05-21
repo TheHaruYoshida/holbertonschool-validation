@@ -1,7 +1,7 @@
 lint: ## Fail when the linter catches an error
 	@golangci-lint run
 
-build: ## Build the website
+build: lint ## Build the website
 	@hugo
 	@go build -o awesome-api
 
