@@ -1,3 +1,6 @@
+lint: ## Fail when the linter catches an error
+	@golangci-lint run
+
 build: ## Build the website
 	@hugo
 	@go build -o awesome-api
@@ -25,6 +28,3 @@ stop: ## Stops the application
 test: ## Test on certain space
 	@curl http://localhost:9999
 	@curl http://localhost:9999/health
-
-lint: ## Fail when the linter catches an error
-	@golangci-lint run
