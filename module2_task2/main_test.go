@@ -30,7 +30,18 @@ func Test_HelloHandler(t *testing.T) {
 			responseCode: 200,
 			body:         "Hello Rosalind Franklin!",
 		},
-		// INSERT MORE TESTS HERE
+		{
+			name:         "Special Characters in Name",
+			queryString:  "name=John%20Jolberton%26%40",
+			responseCode: 200,
+			body:         "Hello John Jolberton&@!",
+		},
+		{
+			name:         "Name with Leading and Trailing Whitespace",
+			queryString:  "name=  MJane  ",
+			responseCode: 200,
+			body:         "Hello   MJane  !",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

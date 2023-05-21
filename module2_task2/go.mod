@@ -1,5 +1,5 @@
 module github.com/TheHaruYoshida/awesome-api
 
-go 1.20
+go 1.15
 
-go get github.com/gorilla/mux
+require github.com/gorilla/mux v1.8.0
